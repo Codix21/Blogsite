@@ -1,0 +1,223 @@
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+/* ---------------- HEADER ---------------- */
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 30px 60px;
+  background-color: #0a0a0a;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+
+.logo {
+  font-size: 32px;
+  color: #B88B2A;
+  font-weight: lighter;
+  letter-spacing: 4.8px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  font-size: 14px;
+  color: #fff;
+  text-decoration: none;
+  margin-left: 30px;
+  letter-spacing: 1.4px;
+}
+
+nav button {
+  margin-left: 30px;
+  padding: 5px 20px;
+  border: 1px solid #B88B2A;
+  background-color: #0C0C0C;
+  color: #B88B2A;
+  cursor: pointer;
+  font-size: 14px;
+  letter-spacing: 1.4px;
+}
+
+nav button:hover {
+  background-color: #252423;
+}
+
+/* User info badge */
+#user-info {
+  display: inline-block;
+  padding: 6px 16px;
+  background-color: #1a1a1a;
+  border-radius: 20px;
+  font-size: 15px;
+  color: #B88B2A;
+  border: 1px solid #2c2c2c;
+}
+
+/* ---------------- HERO BANNER ---------------- */
+
+.hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.hero * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 72px;
+  font-weight: lighter;
+  letter-spacing: 14.4px;
+}
+
+.hero p {
+  margin: 10px 0;
+  color: #B88B2A;
+  font-size: 18px;
+  letter-spacing: 2.7px;
+}
+
+/* ---------------- COLLECTION CARDS ---------------- */
+
+.collections {
+  display: flex;
+  justify-content: space-around;
+  padding: 60px;
+  background-color: #111;
+}
+
+.card {
+  width: 30%;
+  text-align: left;
+}
+
+.card img {
+  width: 100%;
+  border: 1px solid #444;
+}
+
+.card h3 {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: lighter;
+  letter-spacing: 1.8px;
+}
+
+.card a {
+  font-size: 14px;
+  color: #B88B2A;
+  text-decoration: none;
+  letter-spacing: 0.7px;
+}
+
+/* ---------------- NEWSLETTER ---------------- */
+
+.newsletter {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #0a0a0a;
+}
+
+.newsletter input {
+  padding: 10px;
+  margin-right: 10px;
+  width: 250px;
+  background-color: #0C0C0C;
+  border: 1px solid #222;
+  color: white;
+}
+
+.newsletter input:focus {
+  outline: none;
+  box-shadow: 0 0 5px #B88B2A;
+}
+
+.newsletter button {
+  padding: 10px 20px;
+  border: 1px solid #B88B2A;
+  background-color: #0C0C0C;
+  color: #B88B2A;
+  cursor: pointer;
+  letter-spacing: 1.4px;
+}
+
+.newsletter button:hover {
+  background-color: #252423;
+}
+
+/* Newsletter fade message */
+.fade-message {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #B88B2A;
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+.fade-message.hidden {
+  opacity: 0;
+}
+
+/* ---------------- FOOTER ---------------- */
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 12px;
+  color: #777;
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .collections {
+    flex-direction: column;
+    gap: 40px;
+    padding: 40px 20px;
+  }
+
+  .card {
+    width: 100%;
+  }
+}
