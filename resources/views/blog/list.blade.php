@@ -8,11 +8,16 @@
 
 <div class="blog-list-container">
 
-    @foreach($blogs as $blog)
+    @foreach($posts as $post)
         <div class="blog-card">
-            <h3>{{ $blog->title }}</h3>
-            <p>{{ Str::limit($blog->content, 120) }}</p>
-            <a href="{{ route('blog.single', $blog->slug) }}">Read more →</a>
+            <h3>{{ $post->title }}</h3>
+            <p>{{ Str::limit($post->excerpt ?? $post->content, 120) }}</p>
+
+            <a href="{{ route('blog.single', $post->slug) }}">
+    Read more →
+</a>
+
+
         </div>
     @endforeach
 

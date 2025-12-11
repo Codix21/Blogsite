@@ -1,11 +1,11 @@
 @extends('layouts.layout')
 
-@section('title', $blog->title)
+@section('title', $post->title)
 
 @section('content')
 
-<h1>{{ $blog->title }}</h1>
+<h1>{{ $post->title }}</h1>
 
-<p>{{ $blog->content }}</p>
+<p>{{ $post->content }}</p>
 
 @endsection

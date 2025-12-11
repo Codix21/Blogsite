@@ -4,10 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
+
 class Post extends Model
 {
     protected $fillable = [
-        'category_id','title','excerpt','content','image'
+        'category_id', 'title', 'excerpt', 'content', 'image'
     ];
 
     public function category()

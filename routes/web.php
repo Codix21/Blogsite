@@ -4,9 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BlogController;
 use App\Models\Category;
 
-
-
-
 Route::get('/', function () {
     $categories = Category::all();
 
@@ -22,7 +19,5 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
-Route::get('/blog/{category}', [BlogController::class, 'list']);
-Route::get('/post/{id}', [BlogController::class, 'single']);
 Route::get('/category/{slug}', [BlogController::class, 'list'])->name('blog.list');
-Route::get('/blog/{slug}', [BlogController::class, 'single'])->name('blog.single');
+Route::get('/post/{slug}', [BlogController::class, 'single'])->name('blog.single');
